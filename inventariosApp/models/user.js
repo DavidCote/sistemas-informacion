@@ -1,16 +1,17 @@
-const login = (email, pass, callback)=>{
-  var error='';
+const login = (email, passwd, callback)=>{
+  var err='';
   var bd_data=''; //simula la informacion proveniente de BD
-  if (email == 'joe@doe.com' && pass='1234') {
+
+  if (email == 'joe@doe.com' && passwd=='1234') {
     bd_data={
       //consultar en bd info faltante
       'email':email,
       'depto':'Ventas',
-      'phone':5555123
+      'phone':'5555123'
     }
   } else {
     err={
-      'mensaje';"Credenciales incorrectas"
+      'mensaje':"Credenciales incorrectas"
     }
   }
   callback(err,bd_data);
@@ -18,4 +19,4 @@ const login = (email, pass, callback)=>{
 
 
 
-exports.login=login;
+exports.login = login;
